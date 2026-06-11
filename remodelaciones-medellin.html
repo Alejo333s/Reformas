@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Remodelaciones Medellín | Diseño y Construcción de Lujo</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        // Tailwind config debe definirse ANTES del CDN con la sintaxis correcta
+        window.tailwind = { config: {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#e4e2e1",
+                        "on-primary": "#ffffff",
+                        "on-secondary-container": "#007232",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#dcd9d9",
+                        "surface-tint": "#9c4329",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#ffdbd1",
+                        "background": "#fcf9f8",
+                        "inverse-surface": "#303030",
+                        "primary-container": "#b8583d",
+                        "surface-container-highest": "#e4e2e1",
+                        "on-primary-fixed": "#3b0900",
+                        "on-surface": "#1b1c1c",
+                        "on-surface-variant": "#56423d",
+                        "primary": "#994127",
+                        "primary-fixed-dim": "#ffb5a0",
+                        "on-primary-fixed-variant": "#7d2c14",
+                        "on-secondary-fixed-variant": "#005322",
+                        "surface-container-high": "#eae7e7",
+                        "secondary-fixed-dim": "#3de273",
+                        "inverse-primary": "#ffb5a0",
+                        "on-tertiary-fixed": "#1b1c19",
+                        "surface": "#fcf9f8",
+                        "on-secondary-fixed": "#002109",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#1b1c1c",
+                        "surface-container": "#f0eded",
+                        "surface-container-low": "#f6f3f2",
+                        "surface-bright": "#fcf9f8",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#5c5c58",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#474744",
+                        "on-primary-container": "#fffbff",
+                        "secondary-container": "#5dfd8a",
+                        "outline": "#89726c",
+                        "inverse-on-surface": "#f3f0f0",
+                        "tertiary-fixed": "#e4e2dd",
+                        "tertiary-container": "#757571",
+                        "secondary": "#006d2f",
+                        "secondary-fixed": "#66ff8e",
+                        "tertiary-fixed-dim": "#c8c6c2",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#dcc1ba",
+                        "on-tertiary-container": "#fefcf7",
+                        "whatsapp": "#25D366"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "base": "8px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "48px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "title-lg": ["Montserrat"],
+                        "label-sm": ["Inter"]
+                    }
+                }
+            }
+        }};
+    </script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-auto-rows: 200px;
+            gap: 16px;
+        }
+        .masonry-item-tall { grid-row: span 2; }
+        .masonry-item-wide { grid-column: span 2; }
+        
+        .before-after-slider {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 500px;
+        }
+        .slider-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .slider-handle {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: white;
+            left: 50%;
+            cursor: ew-resize;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- 1. BARRA DE NAVEGACIÓN FIJA -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 shadow-sm">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<a class="font-title-lg text-title-lg font-bold text-primary" href="#">Remodelaciones Medellín</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#servicios">Servicios</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#proyectos">Proyectos</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#nosotros">Nosotros</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#faq">FAQ</a>
+<a href="https://wa.me/573016363770" class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-sm hover:opacity-90 active:scale-95 transition-all">Cotizar ahora</a>
+</div>
+<button class="md:hidden text-primary" onclick="var m=document.getElementById('mobile-menu'); m.classList.toggle('hidden'); m.classList.toggle('flex')">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+
+<!-- MENÚ MÓVIL -->
+<div class="fixed inset-0 z-40 bg-surface/95 backdrop-blur-md flex-col items-center justify-center gap-8 hidden" id="mobile-menu">
+  <a class="font-title-lg text-2xl text-on-surface" href="#servicios" onclick="document.getElementById('mobile-menu').classList.add('hidden');document.getElementById('mobile-menu').classList.remove('flex')">Servicios</a>
+  <a class="font-title-lg text-2xl text-on-surface" href="#proyectos" onclick="document.getElementById('mobile-menu').classList.add('hidden');document.getElementById('mobile-menu').classList.remove('flex')">Proyectos</a>
+  <a class="font-title-lg text-2xl text-on-surface" href="#nosotros" onclick="document.getElementById('mobile-menu').classList.add('hidden');document.getElementById('mobile-menu').classList.remove('flex')">Nosotros</a>
+  <a class="font-title-lg text-2xl text-on-surface" href="#faq" onclick="document.getElementById('mobile-menu').classList.add('hidden');document.getElementById('mobile-menu').classList.remove('flex')">Preguntas Frecuentes</a>
+  <a class="bg-primary text-on-primary px-8 py-3 rounded-lg font-label-sm text-lg" href="https://wa.me/573016363770">Cotizar ahora</a>
+</div>
+<!-- 2. HERO -->
+<header class="relative min-h-screen flex items-center pt-20">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A luxurious modern kitchen in Medellín with high-end marble countertops, warm wood cabinetry, and designer pendant lighting. The space is illuminated by soft morning sunlight streaming through large windows, creating a welcoming and sophisticated atmosphere with a palette of terracotta and cream tones. Architectural precision and clean lines define the contemporary interior design style." src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1600&q=80"/>
+<div class="absolute inset-0 bg-black/40"></div>
+</div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-white">
+<div class="inline-block bg-primary/20 backdrop-blur-md border border-primary-fixed-dim/30 px-4 py-1 rounded-full mb-6">
+<span class="font-label-sm text-primary-fixed-dim tracking-wider uppercase">Más de 500 proyectos entregados</span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg max-w-3xl mb-6">
+                Transformamos tu hogar en el espacio que siempre soñaste
+            </h1>
+<p class="font-body-lg text-body-lg max-w-2xl mb-10 opacity-90">
+                Remodelaciones integrales en Medellín y el Área Metropolitana. Diseño, calidad y cumplimiento garantizado con la precisión arquitectónica que mereces.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex items-center justify-center gap-2 bg-whatsapp text-white px-8 py-4 rounded-lg font-title-lg hover:shadow-lg transition-all" href="https://wa.me/573016363770">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:24px;height:24px;flex-shrink:0;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Cotiza gratis por WhatsApp
+                </a>
+<a class="flex items-center justify-center border-2 border-white text-white px-8 py-4 rounded-lg font-title-lg hover:bg-white/10 transition-all" href="#proyectos">
+                    Ver proyectos
+                </a>
+</div>
+</div>
+</header>
+<!-- 3. BARRA DE CONFIANZA -->
+<section class="bg-inverse-surface py-12">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
+<div>
+<div class="font-headline-md text-primary-fixed-dim mb-1">500+</div>
+<div class="font-label-sm text-surface-variant uppercase tracking-widest">Proyectos</div>
+</div>
+<div>
+<div class="font-headline-md text-primary-fixed-dim mb-1">12+</div>
+<div class="font-label-sm text-surface-variant uppercase tracking-widest">Años de Experiencia</div>
+</div>
+<div>
+<div class="font-headline-md text-primary-fixed-dim mb-1">100%</div>
+<div class="font-label-sm text-surface-variant uppercase tracking-widest">Clientes Satisfechos</div>
+</div>
+<div>
+<div class="font-headline-md text-primary-fixed-dim mb-1">10</div>
+<div class="font-label-sm text-surface-variant uppercase tracking-widest">Municipios Atendidos</div>
+</div>
+</div>
+</section>
+<!-- 4. SERVICIOS -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="servicios">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md mb-4 text-primary">Nuestros Servicios Especializados</h2>
+<div class="w-24 h-1 bg-primary-container mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+<!-- Servicio 1 -->
+<div class="bg-white p-8 rounded-xl shadow-sm border border-outline-variant/20 hover:-translate-y-2 transition-all duration-300 group">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-4xl">countertops</span>
+</div>
+<h3 class="font-title-lg mb-3">Cocinas modernas</h3>
+<p class="font-body-md text-on-surface-variant mb-6">Diseños ergonómicos con materiales de vanguardia.</p>
+<a class="text-primary font-label-sm flex items-center gap-1 group-hover:underline" href="#">Ver más <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<!-- Servicio 2 -->
+<div class="bg-white p-8 rounded-xl shadow-sm border border-outline-variant/20 hover:-translate-y-2 transition-all duration-300 group">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-4xl">bathtub</span>
+</div>
+<h3 class="font-title-lg mb-3">Baños</h3>
+<p class="font-body-md text-on-surface-variant mb-6">Espacios de relajación con acabados premium e hidromasaje.</p>
+<a class="text-primary font-label-sm flex items-center gap-1 group-hover:underline" href="#">Ver más <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<!-- Servicio 3 -->
+<div class="bg-white p-8 rounded-xl shadow-sm border border-outline-variant/20 hover:-translate-y-2 transition-all duration-300 group">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-4xl">apartment</span>
+</div>
+<h3 class="font-title-lg mb-3">Casas y Apartamentos</h3>
+<p class="font-body-md text-on-surface-variant mb-6">Remodelaciones totales para renovar tu hogar por completo.</p>
+<a class="text-primary font-label-sm flex items-center gap-1 group-hover:underline" href="#">Ver más <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<!-- Servicio 4 -->
+<div class="bg-white p-8 rounded-xl shadow-sm border border-outline-variant/20 hover:-translate-y-2 transition-all duration-300 group">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-4xl">storefront</span>
+</div>
+<h3 class="font-title-lg mb-3">Locales y Oficinas</h3>
+<p class="font-body-md text-on-surface-variant mb-6">Ambientes corporativos que inspiran productividad.</p>
+<a class="text-primary font-label-sm flex items-center gap-1 group-hover:underline" href="#">Ver más <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<!-- Servicio 5 -->
+<div class="bg-white p-8 rounded-xl shadow-sm border border-outline-variant/20 hover:-translate-y-2 transition-all duration-300 group">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-4xl">format_paint</span>
+</div>
+<h3 class="font-title-lg mb-3">Acabados y obra blanca</h3>
+<p class="font-body-md text-on-surface-variant mb-6">Detalles impecables que marcan la diferencia en tu obra.</p>
+<a class="text-primary font-label-sm flex items-center gap-1 group-hover:underline" href="#">Ver más <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+</section>
+<!-- 5. CÓMO TRABAJAMOS -->
+<section class="bg-surface-container-low py-24">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<h2 class="font-headline-md text-headline-md text-center mb-16">Proceso Transparente</h2>
+<div class="relative">
+<!-- Line -->
+<div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-outline-variant/30 -translate-y-1/2"></div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+<!-- Step 1 -->
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold mb-6 ring-8 ring-background">1</div>
+<h4 class="font-title-lg mb-2">Contacto y visita gratis</h4>
+<p class="font-body-md text-on-surface-variant">Evaluamos tu espacio sin compromiso alguno.</p>
+</div>
+<!-- Step 2 -->
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold mb-6 ring-8 ring-background">2</div>
+<h4 class="font-title-lg mb-2">Diseño y propuesta</h4>
+<p class="font-body-md text-on-surface-variant">Creamos un plan detallado y presupuesto justo.</p>
+</div>
+<!-- Step 3 -->
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold mb-6 ring-8 ring-background">3</div>
+<h4 class="font-title-lg mb-2">Ejecución del proyecto</h4>
+<p class="font-body-md text-on-surface-variant">Construimos con materiales premium y limpieza.</p>
+</div>
+<!-- Step 4 -->
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold mb-6 ring-8 ring-background">4</div>
+<h4 class="font-title-lg mb-2">Entrega y garantía</h4>
+<p class="font-body-md text-on-surface-variant">Disfruta tu nuevo hogar con respaldo total.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. GALERÍA DE PROYECTOS -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="proyectos">
+<h2 class="font-headline-md text-headline-md mb-12">Galería de Transformaciones</h2>
+<!-- Slider Antes/Después -->
+<div class="mb-16">
+<h3 class="font-title-lg mb-4">Proyecto Destacado: Apartamento en El Poblado</h3>
+<div class="before-after-slider rounded-xl shadow-lg border border-outline-variant/30 group">
+<img class="slider-image" data-alt="High-quality professional photography showing a renovated luxury bathroom in Medellín after the remodel. The space features textured stone tiles in terracotta and charcoal, a floating wood vanity with a marble top, and sleek modern fixtures. Bright, ambient lighting highlights the clean surfaces and high-end materials, showcasing a warm architectural precision." src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1280&q=80"/>
+<div class="absolute inset-0 overflow-hidden" id="before-container" style="width: 50%;">
+<img class="slider-image max-w-none w-full h-full" data-alt="A dull, outdated bathroom interior in Medellín before the renovation. The tiles are old and cracked, the lighting is dim and yellowish, and the layout feels cluttered and small. This image captures the 'before' state of a construction project, emphasizing the need for professional architectural intervention to achieve a modern luxury look." src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=1280&q=80" style="width: 1280px;"/>
+</div>
+<div class="slider-handle" id="slider-handle">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-primary">unfold_more</span>
+</div>
+</div>
+<div class="absolute top-4 left-4 bg-black/50 text-white px-3 py-1 rounded-full font-label-sm">Antes</div>
+<div class="absolute top-4 right-4 bg-primary/80 text-white px-3 py-1 rounded-full font-label-sm">Después</div>
+</div>
+</div>
+<!-- Masonry Gallery -->
+<div class="masonry-grid">
+<div class="masonry-item-tall group relative overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A sleek, modern living room renovation in a Medellín penthouse. The design utilizes open-plan concepts with warm earth-toned furniture, minimalist wall finishes, and floor-to-ceiling windows overlooking the city. Soft architectural lighting creates a cozy yet professional atmosphere." src="https://images.unsplash.com/photo-1600210492493-0946911123ea?w=800&q=80"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<p class="text-white font-label-sm">Sala Moderna - Envigado</p>
+</div>
+</div>
+<div class="masonry-item-wide group relative overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Detailed close-up of a designer kitchen island with custom wooden cabinetry and a thick white quartz countertop. The styling is minimalist and high-end, featuring a terracotta vase with dry greenery as a centerpiece, illustrating the tactile warmth and corporate modern aesthetic of the brand." src="https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=1200&q=80"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<p class="text-white font-label-sm">Cocina Integral - Sabaneta</p>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Modern architectural stairs with floating wood treads and glass railings in a renovated Medellín home. The background features a textured clay-colored wall and recessed LED lighting, reflecting the precision and luxury of high-end home remodeling." src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=800&q=80"/>
+</div>
+<div class="group relative overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A bright and airy bedroom renovation in Medellín. Neutral tones of beige and white are used on the walls and linens, contrasted by a rich terracotta accent wall. The furniture is minimalist and made from light-colored oak, creating a serene and modern sanctuary." src="https://images.unsplash.com/photo-1586105251261-72a756497a11?w=800&q=80"/>
+</div>
+</div>
+</section>
+<!-- 7. TESTIMONIOS -->
+<section class="bg-surface-container py-24">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-center mb-12">
+<h2 class="font-headline-md text-headline-md">Lo que dicen nuestros clientes</h2>
+<div class="flex items-center gap-2 mt-4 md:mt-0">
+<img alt="Google" class="h-6" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/200px-Google_2015_logo.svg.png"/>
+<div class="flex text-yellow-500">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-sm">4.9/5 Reviews</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white p-8 rounded-xl shadow-sm">
+<div class="flex text-yellow-500 mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md italic mb-6">"Excelente servicio. Remodelamos toda la cocina y el resultado superó nuestras expectativas. Cumplieron con los plazos y el equipo fue muy profesional."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-variant flex items-center justify-center font-bold">CP</div>
+<div>
+<p class="font-label-sm">Carolina Peláez</p>
+<p class="text-xs text-on-surface-variant">Apartamento en El Poblado</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-sm">
+<div class="flex text-yellow-500 mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md italic mb-6">"La mejor decisión para mi oficina. El diseño es moderno y funcional. Muy organizados con el presupuesto, no hubo costos sorpresa."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-variant flex items-center justify-center font-bold">AM</div>
+<div>
+<p class="font-label-sm">Andrés Mendoza</p>
+<p class="text-xs text-on-surface-variant">Local Comercial - Envigado</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-sm">
+<div class="flex text-yellow-500 mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md italic mb-6">"Muy serios y cumplidos. La garantía de obra blanca es real, tuvimos un pequeño detalle y lo solucionaron de inmediato al día siguiente."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-variant flex items-center justify-center font-bold">LG</div>
+<div>
+<p class="font-label-sm">Laura Giraldo</p>
+<p class="text-xs text-on-surface-variant">Casa en Llanogrande</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. POR QUÉ ELEGIRNOS -->
+<section class="relative py-32 overflow-hidden bg-fixed bg-center bg-cover" id="nosotros" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80')">
+<div class="absolute inset-0 bg-primary/90 mix-blend-multiply"></div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-white">
+<h2 class="font-headline-md text-headline-md text-center mb-16">¿Por qué elegirnos?</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="text-center">
+<div class="w-20 h-20 border-2 border-white rounded-full flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-4xl">architecture</span>
+</div>
+<h3 class="font-title-lg mb-4">Diseños personalizados</h3>
+<p class="font-body-md opacity-80">Creamos espacios únicos adaptados a tu estilo de vida y necesidades específicas.</p>
+</div>
+<div class="text-center">
+<div class="w-20 h-20 border-2 border-white rounded-full flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-4xl">verified</span>
+</div>
+<h3 class="font-title-lg mb-4">Materiales premium</h3>
+<p class="font-body-md opacity-80">Alianzas con los mejores proveedores para garantizar durabilidad y estética superior.</p>
+</div>
+<div class="text-center">
+<div class="w-20 h-20 border-2 border-white rounded-full flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-4xl">schedule</span>
+</div>
+<h3 class="font-title-lg mb-4">Cumplimiento de plazos</h3>
+<p class="font-body-md opacity-80">Tu tiempo es valioso. Entregamos puntualmente según el cronograma acordado.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 9. CTA INTERMEDIO -->
+<section class="bg-primary py-16">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="text-white">
+<h2 class="font-headline-md mb-2">¿Listo para empezar tu remodelación?</h2>
+<p class="font-body-lg opacity-90">Recibe una cotización rápida hoy mismo sin compromisos.</p>
+</div>
+<a class="flex items-center gap-3 bg-whatsapp text-white px-10 py-5 rounded-full font-headline-md shadow-xl hover:scale-105 transition-transform" href="https://wa.me/573016363770">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:24px;height:24px;flex-shrink:0;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Hablar por WhatsApp
+            </a>
+</div>
+</section>
+<!-- 10. FAQ -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-3xl mx-auto" id="faq">
+<h2 class="font-headline-md text-center mb-12">Preguntas Frecuentes</h2>
+<div class="space-y-4">
+<!-- FAQ 1 -->
+<details class="group bg-white border border-outline-variant/30 rounded-lg" open="">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none font-title-lg text-on-surface">
+                    ¿Qué servicios de remodelación ofrecen?
+                    <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="p-6 pt-0 font-body-md text-on-surface-variant border-t border-outline-variant/10">
+                    Ofrecemos remodelaciones integrales que incluyen diseño de interiores, obra civil, acabados, redes eléctricas, hidrosanitarias y carpintería arquitectónica para cocinas, baños, casas y locales comerciales.
+                </div>
+</details>
+<!-- FAQ 2 -->
+<details class="group bg-white border border-outline-variant/30 rounded-lg">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none font-title-lg text-on-surface">
+                    ¿Tienen cobertura en todo el Valle de Aburrá?
+                    <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="p-6 pt-0 font-body-md text-on-surface-variant border-t border-outline-variant/10">
+                    Sí, atendemos Medellín, Envigado, Itagüí, Sabaneta, La Estrella, Caldas, Bello, Copacabana, Girardota y Barbosa. También realizamos proyectos en el Oriente Antioqueño.
+                </div>
+</details>
+<!-- FAQ 3 -->
+<details class="group bg-white border border-outline-variant/30 rounded-lg">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none font-title-lg text-on-surface">
+                    ¿Cuánto tiempo dura una remodelación promedio?
+                    <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="p-6 pt-0 font-body-md text-on-surface-variant border-t border-outline-variant/10">
+                    Depende del alcance. Una cocina o baño suele tardar entre 2 y 3 semanas. Una remodelación integral de apartamento puede durar de 2 a 3 meses. Entregamos un cronograma exacto al inicio.
+                </div>
+</details>
+<!-- FAQ 4 -->
+<details class="group bg-white border border-outline-variant/30 rounded-lg">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none font-title-lg text-on-surface">
+                    ¿Ofrecen garantía por los trabajos realizados?
+                    <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="p-6 pt-0 font-body-md text-on-surface-variant border-t border-outline-variant/10">
+                    Absolutamente. Ofrecemos 1 año de garantía en acabados y 5 años en estructura y redes técnicas. Nuestro compromiso es tu tranquilidad a largo plazo.
+                </div>
+</details>
+<!-- FAQ 5 -->
+<details class="group bg-white border border-outline-variant/30 rounded-lg">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none font-title-lg text-on-surface">
+                    ¿Cómo manejan el presupuesto de obra?
+                    <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="p-6 pt-0 font-body-md text-on-surface-variant border-t border-outline-variant/10">
+                    Trabajamos con presupuestos cerrados. Una vez firmado el contrato, el precio no varía a menos que el cliente solicite cambios adicionales durante la obra.
+                </div>
+</details>
+<!-- FAQ 6 -->
+<details class="group bg-white border border-outline-variant/30 rounded-lg">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none font-title-lg text-on-surface">
+                    ¿Realizan diseño 3D antes de la obra?
+                    <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="p-6 pt-0 font-body-md text-on-surface-variant border-t border-outline-variant/10">
+                    Sí, incluimos renders 3D realistas en nuestras propuestas para que puedas visualizar exactamente cómo quedará tu espacio antes de pegar el primer ladrillo.
+                </div>
+</details>
+</div>
+</section>
+<!-- 11. FORMULARIO FINAL -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+<div>
+<h2 class="font-headline-md text-headline-md mb-6">Cotiza tu proyecto hoy</h2>
+<p class="font-body-lg text-on-surface-variant mb-8">Estamos listos para dar vida a tus ideas. Déjanos tus datos y un arquitecto de nuestro equipo se contactará contigo en menos de 24 horas.</p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<div>
+<p class="font-title-lg">Nuestra oficina</p>
+<p class="font-body-md text-on-surface-variant">Cra. 37a #2 Sur-103, El Poblado, Medellín.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">call</span>
+<div>
+<p class="font-title-lg">Llámanos</p>
+<p class="font-body-md text-on-surface-variant">+57 300 123 4567</p>
+</div>
+</div>
+</div>
+</div>
+<form class="bg-white p-8 rounded-2xl shadow-xl space-y-4 border border-outline-variant/20">
+<div>
+<label class="block font-label-sm mb-2">Nombre completo</label>
+<input class="w-full rounded-lg border-outline-variant/30 focus:border-primary focus:ring-primary py-3" placeholder="Ej: Juan Pérez" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm mb-2">Teléfono / WhatsApp</label>
+<input class="w-full rounded-lg border-outline-variant/30 focus:border-primary focus:ring-primary py-3" placeholder="Ej: 300 000 0000" type="tel"/>
+</div>
+<div>
+<label class="block font-label-sm mb-2">Tipo de Proyecto</label>
+<select class="w-full rounded-lg border-outline-variant/30 focus:border-primary focus:ring-primary py-3">
+<option>Cocina</option>
+<option>Baño</option>
+<option>Casa completa</option>
+<option>Oficina / Local</option>
+<option>Otro</option>
+</select>
+</div>
+<div>
+<label class="block font-label-sm mb-2">Mensaje (Opcional)</label>
+<textarea class="w-full rounded-lg border-outline-variant/30 focus:border-primary focus:ring-primary py-3" placeholder="Cuéntanos un poco sobre tu idea..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary font-title-lg py-4 rounded-lg hover:opacity-90 transition-opacity" type="submit">Enviar solicitud de cotización</button>
+</form>
+</div>
+</section>
+<!-- 12. FOOTER -->
+<footer class="bg-inverse-surface text-surface-variant w-full py-12 px-margin-mobile md:px-margin-desktop border-t border-outline-variant/20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<a class="font-title-lg text-title-lg font-bold text-primary-fixed-dim mb-6 inline-block" href="#">Remodelaciones Medellín</a>
+<p class="font-body-md opacity-70">Excelencia en construcción y diseño arquitectónico en el corazón de Antioquia.</p>
+</div>
+<div>
+<h4 class="font-label-sm text-white uppercase tracking-widest mb-6">Navegación</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md hover:text-primary-fixed-dim transition-colors" href="#">Servicios</a></li>
+<li><a class="font-body-md hover:text-primary-fixed-dim transition-colors" href="#">Proyectos</a></li>
+<li><a class="font-body-md hover:text-primary-fixed-dim transition-colors" href="#">Nosotros</a></li>
+<li><a class="font-body-md hover:text-primary-fixed-dim transition-colors" href="#">Preguntas Frecuentes</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-sm text-white uppercase tracking-widest mb-6">Legal</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md hover:text-primary-fixed-dim transition-colors" href="#">Privacidad</a></li>
+<li><a class="font-body-md hover:text-primary-fixed-dim transition-colors" href="#">Términos de Servicio</a></li>
+<li><a class="font-body-md hover:text-primary-fixed-dim transition-colors" href="#">Garantía de Obra</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-sm text-white uppercase tracking-widest mb-6">Síguenos</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-surface-variant/30 flex items-center justify-center hover:bg-primary transition-all" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-surface-variant/30 flex items-center justify-center hover:bg-primary transition-all" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto mt-12 pt-8 border-t border-outline-variant/10 text-center">
+<p class="font-label-sm opacity-60">© 2026 Remodelaciones Medellín. Todos los derechos reservados.</p>
+</div>
+</footer>
+<!-- BOTÓN FLOTANTE WHATSAPP -->
+<a class="fixed bottom-8 right-8 z-50 bg-whatsapp text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all" href="https://wa.me/573016363770">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:32px;height:32px;flex-shrink:0;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<script>
+        // Simple Before/After Slider Logic
+        const slider = document.querySelector('.before-after-slider');
+        const handle = document.getElementById('slider-handle');
+        const beforeContainer = document.getElementById('before-container');
+
+        const moveSlider = (e) => {
+            const rect = slider.getBoundingClientRect();
+            let x = (e.clientX || e.touches[0].clientX) - rect.left;
+            let percent = (x / rect.width) * 100;
+            
+            if (percent < 0) percent = 0;
+            if (percent > 100) percent = 100;
+            
+            handle.style.left = `${percent}%`;
+            beforeContainer.style.width = `${percent}%`;
+        };
+
+        slider.addEventListener('mousemove', moveSlider);
+        slider.addEventListener('touchmove', moveSlider);
+
+        // Smooth scroll for anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body></html>
